@@ -691,7 +691,7 @@ void acbr_network_controller::start_acbr()
 {
     acbr = new QProcess(this);
 
-    QSettings settings("Shaman tecnologia", "BabyTec");
+    QSettings settings("DBL Tecnologia", "DBL_boletos");
     path_exe_acbr = settings.value("General/path_exe_acbr").toString();
 
     connect(acbr, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
@@ -742,7 +742,7 @@ acbr_network_controller::~acbr_network_controller()
 
 void acbr_network_controller::connect_to_host()
 {
-    QSettings settings("Shaman tecnologia", "BabyTec");
+    QSettings settings("DBL Tecnologia", "DBL_boletos");
 
     quint16 porta = settings.value("Network/acbr_porta").toUInt();
 
